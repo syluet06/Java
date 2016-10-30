@@ -4,10 +4,7 @@ import java.util.*;
 
 public class ss {
 	public static void main(String[] args) {
-		String[] something = {"integral",
-							   "calculus",
-							   "banana",
-							   "anything"};
+		String[] something = {"integral", "calculus", "banana", "anything"};
 		Character[] anything = {'s', 'o', 'n', 'e', 'r'};
 		List<Character> list2 = Arrays.asList(anything);
 		/* Normal form of list */
