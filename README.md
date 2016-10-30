@@ -1,3 +1,3 @@
 # Java
-My own java mini java projects
+My own mini java projects
 This file include my beginner projects :)
