@@ -1,0 +1,43 @@
+package comp;
+
+import java.util.*;
+
+public class ss {
+	public static void main(String[] args) {
+		String[] something = {"integral",
+							   "calculus",
+							   "banana",
+							   "anything"};
+		Character[] anything = {'s', 'o', 'n', 'e', 'r'};
+		List<Character> list2 = Arrays.asList(anything);
+		/* Normal form of list */
+		List<String> list1 = Arrays.asList(something);
+		System.out.println("List is :");
+		output(list1);
+		
+		/* Reverse form of list */
+		Collections.reverse(list1);
+		System.out.println("Reverse form is : ");
+		output(list1);
+		
+		//Filling Method
+		Collections.fill(list2, 'X');
+		output2(list2);
+		
+	}
+	
+	//Output Method
+	
+	private static void output2(List<Character> thelist) {
+		for(Character thing: thelist) {
+			System.out.println(thing);
+		}
+		
+	}
+
+	private static void output(List<String> thelist) {
+		for(String counter: thelist) {
+			System.out.println(counter);
+		}
+	}
+}
