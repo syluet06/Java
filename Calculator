@@ -1,0 +1,110 @@
+                                  //Methods//
+package calculator;
+
+import java.awt.List;
+import java.util.ArrayList;
+
+public class calc {
+    public static double cat;
+    public static double first;
+    public static double second;
+
+    public calc(){
+        this(0,0,0);
+    }
+    public calc(double c){
+        this(c,0,0);
+    }
+    public calc(double c, double f){
+        this(c,f,0);
+    }
+    public calc(double c, double f, double s){
+        setTime(c,f,s);
+    }
+    public void setTime(double c, double f, double s){
+        setCat(c);
+        setFirst(f);
+        setSecond(s);
+    }
+    public void setCat(double c){
+        cat = ((c>0&&c<5) ? c:0);
+    }
+    public void setFirst(double f){
+        first = ((f<0||f>=0) ? f:0);
+    }
+    public void setSecond(double s){
+        second = ((s<0||s>=0) ? s:0);
+    }
+    public double getCat(){
+        return cat;
+    }
+    public double getFirst(){
+        return first;
+    }
+    public double getSecond(){
+        return second;
+    }
+    public static void outNum() {
+    	try {
+    	if(cat == 1) {
+    		System.out.print("Result is : "+ (first + second) + "\n");
+    	}
+    	if(cat == 2) {
+    		System.out.print("Result is : "+ (first - second) + "\n");
+    	}
+    	if(cat == 3) {
+    		System.out.print("Result : "+ (first * second) + "\n");
+    	}
+    	if(cat == 4) {
+    		System.out.print("Result is : "+ (first / second) + "\n");
+    	}  
+    	if(cat == 0) {
+    		System.out.print("Why???? Are you heçkır??\n");
+    	}
+    	}catch(ArithmeticException e) {
+    		System.out.print("Please dont type 0 for division");
+    	}
+    }
+}
+
+
+                  //MAIN CLASS//
+                  
+package calculator;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+
+		// SONI CALCULATOR//
+
+
+public class main {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.print("Welcome to Soni Calculator");
+		try {
+		while(true) {
+		System.out.print("\nThese are the things that you can do:" );
+		System.out.print("\n1)Addition" +
+				"\n2)Substraction" +
+				"\n3)Multiplication" +
+				"\n4)Division" +
+				"\nJust write the number please:");
+		double a = input.nextDouble();
+		System.out.print("Enter the first number:");
+		double b = input.nextDouble();
+		System.out.print("Enter the second number:");
+		double c = input.nextDouble();
+		calc x = new calc(a,b,c);
+		calc.outNum();
+		}
+		}catch(InputMismatchException e) {
+			System.out.print("Please don't try to mess up");
+		}
+	}
+}
+
+
+
+
