@@ -9,13 +9,10 @@ import java.util.Scanner;
 public class Ping {
 	public static void main(String[] args) throws IOException {
 		Scanner site = new Scanner(System.in);
-    System.out.print("Enter the site you'll search:");
+    		System.out.print("Enter the site you'll search:");
 		String site2 = site.next(); 
-		long b = System.currentTimeMillis();
 		InetAddress ia = InetAddress.getByName(site2);
 		System.out.print("Site:" + ia.getHostName() + "\nIP:" + ia.getHostAddress() );
-		long a = System.currentTimeMillis();
-		System.out.print("\nTime:" + (a-b) + " ms\n");
 		
 		Ping shell = new Ping();
 		System.out.println(ia.isReachable(5000) ? "Host is reachable\n" : "Cannot reach to the host");
